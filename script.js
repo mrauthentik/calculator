@@ -1,22 +1,24 @@
-let display = document.getElementById("display");
+const uche = document.getElementById('display')
 
-function appendValue(value) {
-  display.value += value;
+function appendValue (userInput) {
+   uche.value += userInput
+ 
 }
 
-function clearDisplay() {
-  display.value = "";
+
+function clearUserInput () {
+    uche.value = " "
 }
 
-function deleteText() {
-    display.value = display.value.slice(0, -1)
-    
+function deleteUserInput () {
+    uche.value = uche.value.slice(0, -1)
 }
 
-function calculate() {
-  try {
-    display.value = eval(display.value);
-  } catch {
-    display.value = "Error";
-  }
+function calculate () {
+    try{
+       uche.value =  eval(uche.value)
+    }catch (err){
+        uche.value = 'Error'
+        console.log(err)
+    }
 }
